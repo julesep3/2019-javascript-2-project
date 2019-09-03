@@ -2,7 +2,7 @@ const util = require('./util')
 const dynamicLine = util.dynamicLine
 
 const from = {
-	name: "Zach Mays",
+	name: "zach Mays",
 	street: "1234 NW 20th",
 	state: "OK",
 	city: "OKC",
