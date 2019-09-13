@@ -2,7 +2,7 @@ const util = require('./util')
 const dynamicLine = util.dynamicLine
 
 const from = {
-	name: "zach Mays",
+	name: "Zach Mays",
 	street: "1234 NW 20th",
 	state: "OK",
 	city: "OKC",
@@ -35,7 +35,18 @@ function createEnvelope(to) {
 }
 
 function createEnvelopes(promptResponses, userData) {
-	userData.forEach(data => {
+	console.log(userData)
+	console.log(promptResponses)
+	
+	const filter1 = userData.filter(word => {
+		return word.age < promptResponses.ageMax
+	})
+	
+	const filter2 = filter1.filter(word => {
+		return word.sex === promptResponses.sex
+	})
+	
+	filter2.forEach(data => {
 		createEnvelope(data)
 	})
 }
