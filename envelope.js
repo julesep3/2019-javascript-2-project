@@ -35,8 +35,6 @@ function createEnvelope(to) {
 }
 
 function createEnvelopes(promptResponses, userData) {
-	console.log(userData)
-	console.log(promptResponses)
 	
 	const filter1 = userData.filter(word => {
 		return word.age < promptResponses.ageMax
